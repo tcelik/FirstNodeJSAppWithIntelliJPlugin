@@ -34,4 +34,12 @@ router.get('/:from-:to', function(req, res, next) { //araya giriyorum requesti s
 
 });
 
+
+router.get('/test', function (req, res,next) {
+    //test.pug'a git ve modeli sana json olarak geçiyorum sen doğrudan key ile ulaşabilirsin.
+
+    //template view engine var arkada test biliyor json alıyor. oluşturup response olarak html-str dönüyor.
+    res.render('test', {"name":"tugberk olsun mu"}); //templates/index.html e yönelmek gibi
+});
+
 module.exports = router;
